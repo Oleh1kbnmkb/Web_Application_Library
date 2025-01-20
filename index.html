@@ -3,41 +3,212 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+</head>
     <title>Web Application Library</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
-            background-color: #f4f4f4;
-        }
-        h1 {
-            text-align: center;
-        }
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        li {
-            margin: 20px 0;
-        }
-        a {
-            text-decoration: none;
-            color: #007BFF;
-            font-size: 20px;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-    </style>
 </head>
 <body>
-    <h1>Welcome to Web Application Library</h1>
-    <p>Click on the links below to explore different projects:</p>
-    <ul>
-        <li><a href="FirstPages/Page1/hed.html" target="_blank">Project 1: Header and Footer</a></li>
-        <li><a href="project2/index.html" target="_blank">Project 2: E-commerce Homepage</a></li>
-        <li><a href="project3/index.html" target="_blank">Project 3: Blog Layout</a></li>
-    </ul>
+
+<style>
+  
+body {
+  width: 100%;
+  height: 100%;
+  background: #222;
+  margin: 0 auto;
+  max-width: 1440px;
+}
+
+.centered-header {
+  display: flex;
+  justify-content: center;
+}
+
+h1 {
+  font-family: 'Roboto', serif;
+  letter-spacing: 2px;
+  text-transform: uppercase; 
+  padding: 50px;
+  color: #eaeaea;
+  text-align: center;
+}
+
+
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.card {
+  width: 270px;
+  height: 307px;
+  padding: 2rem 1rem;
+  background: #6C91C2;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  box-shadow: 0 7px 10px rgb(0, 0, 0, 0.5);
+  transition: 0.5s ease-in-out;
+  margin-bottom: 50px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(35, 35, 35, 0.542), rgb(24, 24, 24));
+  z-index: 2;
+  transition: 0.5s all;
+  opacity: 0;
+}
+
+.card:hover::before {
+  opacity: 1;
+}
+
+.card img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  position: absolute;
+  top: 25px;
+  left: 0;
+  display: block;
+  transition: transform 0.5s;
+}
+
+.card .info {
+  position: absolute;
+  top: 60%;
+  left: 50%; 
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  color: #fff;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.card:hover .info {
+  opacity: 1;
+}
+
+.info h3 {
+  font-weight: 600;
+  margin-bottom: 10px;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 30px;
+  letter-spacing: 2px;
+}
+
+.info p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 34px;
+  width: 282px;
+}
+
+.info a {
+  color: #262626;
+  background-color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-family: 'Jost', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  border-radius: 50px;
+  text-align: center;
+  padding: 12px 15px;
+}
+
+
+
+@media (max-width: 465px) {
+  .card {
+    width: 244px;
+    height: 275px;
+  }
+  .card img {
+    width: 100%;
+    height: 287px;
+  }
+}
+</style>
+
+  <div class="centered-header">
+    <h1>The first page of the site</h1>
+  </div>
+    
+
+  <div class="wrapper">
+    <div class="card">
+      <img src="image/page2.png" alt="">
+      <div class="info">
+        <h3>Page 1</h3>
+        <p>Design for an online store with advertising text and photo behind</p>
+        <a href="FirstPages/Page1/hed.html" class="btn" target="_blank">Watch Now</a>
+      </div>
+    </div>
+    <div class="card">
+      <img src="image/page2.png" alt="">
+      <div class="info">
+        <h3>Page 2</h3>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur adipisicing elit.</p>
+        <a href="" class="btn" target="_blank">Watch Now</a>
+      </div>
+    </div>
+    <div class="card">
+      <img src="image/page2.png" alt="">
+      <div class="info">
+        <h3>Page 3</h3>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur adipisicing elit.</p>
+        <a href="" class="btn" target="_blank">Watch Now</a>
+      </div>
+    </div>
+    <div class="card">
+      <img src="image/page2.png" alt="">
+      <div class="info">
+        <h3>Page 4</h3>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur adipisicing elit.</p>
+        <a href="" class="btn" target="_blank">Watch Now</a>
+      </div>
+    </div>
+    <div class="card">
+      <img src="image/page2.png" alt="">
+      <div class="info">
+        <h3>Page 5</h3>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur adipisicing elit.</p>
+        <a href="" class="btn" target="_blank">Watch Now</a>
+      </div>
+    </div>
+    <div class="card">
+      <img src="image/page2.png" alt="">
+      <div class="info">
+        <h3>Page 6</h3>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur adipisicing elit.</p>
+        <a href="" class="btn" target="_blank">Watch Now</a>
+      </div>
+    </div>
+    <div class="card">
+      <img src="image/page2.png" alt="">
+      <div class="info">
+        <h3>Page 7</h3>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur adipisicing elit.</p>
+        <a href="" class="btn" target="_blank">Watch Now</a>
+      </div>
+    </div>
+  </div>
+
 </body>
 </html>
