@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylec.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
@@ -11,141 +12,7 @@
     <title>Web Application Library</title>
 </head>
 <body>
-
-<style>
   
-body {
-  width: 100%;
-  height: 100%;
-  background: #222;
-  margin: 0 auto;
-  max-width: 1440px;
-}
-
-.centered-header {
-  display: flex;
-  justify-content: center;
-}
-
-h1 {
-  font-family: 'Roboto', serif;
-  letter-spacing: 2px;
-  text-transform: uppercase; 
-  padding: 50px;
-  color: #eaeaea;
-  text-align: center;
-}
-
-
-.wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
-}
-
-.card {
-  width: 270px;
-  height: 307px;
-  padding: 2rem 1rem;
-  background: #6C91C2;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  box-shadow: 0 7px 10px rgb(0, 0, 0, 0.5);
-  transition: 0.5s ease-in-out;
-  margin-bottom: 50px;
-  border-radius: 10px;
-  overflow: hidden;
-}
-
-.card::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: block;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(to bottom, rgba(35, 35, 35, 0.542), rgb(24, 24, 24));
-  z-index: 2;
-  transition: 0.5s all;
-  opacity: 0;
-}
-
-.card:hover::before {
-  opacity: 1;
-}
-
-.card img {
-  width: 100%;
-  height: 320px;
-  object-fit: cover;
-  position: absolute;
-  top: 25px;
-  left: 0;
-  display: block;
-  transition: transform 0.5s;
-}
-
-.card .info {
-  position: absolute;
-  top: 60%;
-  left: 50%; 
-  transform: translate(-50%, -50%);
-  z-index: 3;
-  color: #fff;
-  text-align: center;
-  opacity: 0;
-  transition: opacity 0.5s ease;
-}
-
-.card:hover .info {
-  opacity: 1;
-}
-
-.info h3 {
-  font-weight: 600;
-  margin-bottom: 10px;
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 30px;
-  letter-spacing: 2px;
-}
-
-.info p {
-  font-family: 'Roboto', sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  margin-bottom: 34px;
-  width: 282px;
-}
-
-.info a {
-  color: #262626;
-  background-color: rgb(255, 255, 255);
-  text-decoration: none;
-  font-family: 'Jost', sans-serif;
-  font-weight: 500;
-  font-size: 16px;
-  border-radius: 50px;
-  text-align: center;
-  padding: 12px 15px;
-}
-
-
-
-@media (max-width: 465px) {
-  .card {
-    width: 244px;
-    height: 275px;
-  }
-  .card img {
-    width: 100%;
-    height: 287px;
-  }
-}
-</style>
-
   <div class="centered-header">
     <h1>The first page of the site</h1>
   </div>
